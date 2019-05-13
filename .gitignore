@@ -1,0 +1,7 @@
+scss/*
+.DS_Store
+*.scss
+assets/stylesheets/boostrap/*
+.codekit-cache
+.sass-cache
+group_590a57a0160d6.json
