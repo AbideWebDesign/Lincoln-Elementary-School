@@ -6,30 +6,20 @@
 								<div class="headline">
 									<h2><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Contáctenos' : 'Contact Us'); ?></h2>
 								</div>
-								<p class="mb-1"><strong>Phone:</strong> <?php the_field('primary_phone', 'options'); ?><br/>
+								<p class="mb-1"><strong><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Teléfono' : 'Phone'); ?>:</strong> <?php the_field('primary_phone', 'options'); ?><br/>
 									<strong>Fax:</strong> <?php the_field('fax_number', 'options'); ?><br/>
-									<strong>Attendance:</strong> <?php the_field('attendance_phone', 'options'); ?><br/>
+									<strong><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Asistencia' : 'Attendance'); ?>:</strong> <?php the_field('attendance_phone', 'options'); ?><br/>
 									<?php if(get_field('email', 'options')): ?>
-										<strong>Email:</strong> <a href="mailto:<?php the_field('email', 'options'); ?>"><?php the_field('email', 'options'); ?></a><br/>
+										<strong><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Correo Electrónico' : 'Email'); ?>:</strong> <a href="mailto:<?php the_field('email', 'options'); ?>"><?php the_field('email', 'options'); ?></a><br/>
 									<?php endif; ?>
-									<strong>Address:</strong> <?php the_field('street_address', 'options'); ?>
+									<strong><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Dirección' : 'Address'); ?>:</strong> <?php the_field('street_address', 'options'); ?>
 								</p>
-								<p><strong>Principal:</strong>
+								<p><strong><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Director de Escuela' : 'Principal'); ?>:</strong>
 								<br/>
 								<?php the_field('principal', 'options'); ?><?php if(get_field('principal_email', 'options')): ?>, <a href="mailto:<?php the_field('principal_email', 'options'); ?>"><?php the_field('principal_email', 'options'); ?></a><?php endif; ?>
-								<?php if(get_field('assistant_principal_1', 'options')): ?>
-									<br/>
-									<strong>Assistant Principal:</strong>
-									<br>
-									<?php the_field('assistant_principal_1', 'options'); ?><?php if(get_field('assistant_principal_1_email', 'options')): ?>, <a href="mailto:<?php the_field('assistant_principal_1_email', 'options'); ?>"><?php the_field('assistant_principal_1_email', 'options'); ?></a><?php endif; ?>
-									<?php if(get_field('assistant_principal_2', 'options')): ?>
-										<br>	
-										<strong>Assistant Principal:</strong><br><?php the_field('assistant_principal_2', 'option'); ?><?php if(get_field('assistant_principal_2_email', 'options')): ?>, <a href="mailto:<?php the_field('assistant_principal_2_email', 'options'); ?>"><?php the_field('assistant_principal_2_email', 'options'); ?></a><?php endif; ?>
-									<?php endif; ?>
-								<?php endif; ?>
 								<?php if(get_field('office_manager', 'options')): ?>
 									<br/>
-									<strong>Office Manager:</strong>
+									<strong><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Gerente de Oficina' : 'Office Manager'); ?>:</strong>
 									<br>
 									<?php the_field('office_manager', 'options'); ?><?php if(get_field('office_manager_email', 'options')): ?>, <a href="mailto:<?php the_field('office_manager_email', 'options'); ?>"><?php the_field('office_manager_email', 'options'); ?></a><?php endif; ?>
 								<?php endif; ?>
@@ -38,16 +28,16 @@
 								<div class="headline">
 									<div class="row">
 										<div class="col-lg-8">
-											<h2><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Eventos próximos' : 'Upcoming Events'); ?></h2>
+											<h2><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Eventos Próximos' : 'Upcoming Events'); ?></h2>
 										</div>
 										<div class="col-lg-4 align-self-center justify-content-lg-end d-block d-md-none d-lg-block text-lg-right">
-											<a href="<?php echo home_url('/calendar'); ?>">View Calendar</a>
+											<a href="<?php echo home_url('/calendar'); ?>"><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Ver Calendario' : 'View Calendar'); ?></a>
 										</div>
 									</div>
 								</div>
 								<?php render_list_view(); ?>
 								<div class="d-none d-md-block d-lg-none mt-1">
-									<a href="<?php echo home_url('/calendar'); ?>">View Calendar</a>
+									<a href="<?php echo home_url('/calendar'); ?>"><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Ver Calendario' : 'View Calendar'); ?></a>
 								</div>
 							</div>
 						</div>
@@ -62,7 +52,7 @@
 							<div class="col-sm-5">
 								<ul class="list list-inline">
 									<li class="list-inline-item"><a href="mailto:communications@corvallis.k12.or.us">Webmaster</a></li>
-									<li class="list-inline-item"><a href="mailto:communications@corvallis.k12.or.us">Report an Accessibility Issue</a></li>
+									<li class="list-inline-item"><a href="mailto:communications@corvallis.k12.or.us"><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Reportar un problema de accesibilidad' : 'Report an Accessibility Issue'); ?></a></li>
 								</ul>
 								<div class="footer-text pt-1"><?php the_field('harassment_statement', 'options'); ?></div>
 								<p class="footer-text pt-2">
@@ -80,7 +70,7 @@
 						<div class="row">
 							<div class="col-lg-6 mb-1 mb-lg-0">
 								<ul class="social-media-links">
-									<p>Connect with Us</p>
+									<p><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Conectate con Nosotros' : 'Connect with Us'); ?></p>
 									<li>
 										<a href="https://www.twitter.com/SuptNoss" target="_blank" class="social">
 											<i class="fab fa-twitter-square fa-2x"></i>
@@ -104,7 +94,7 @@
 								</ul>
 							</div>
 							<div id="credits" class="col-lg-6 text-center text-lg-right">
-								<a href="http://abidewebdesign.com" target="_blank">Website Design & Maintenance by Abide Web Design</a>
+								<a href="http://abidewebdesign.com" target="_blank"><?php echo (ICL_LANGUAGE_CODE=='es' ? 'Diseño de sitio web por Abide Web Design' : 'Website Design & Maintenance by Abide Web Design'); ?></a>
 							</div>
 						</div>
 					</div>
@@ -112,20 +102,5 @@
 			</div>
 		</div>
 		<?php wp_footer(); ?>
-		<div id="google_translate_element" class="d-none"></div>
-		<script type="text/javascript">
-			function googleTranslateElementInit() {
-			  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-			}
-			
-			$(function() {
-				$('#menu-top-language a').click(function() {
-					if ($(this).data('lang')) {
-						Cookies.set('csd_translation_preference', $(this).data('lang'), { expires: 365 });
-					}
-				});
-			});
-		</script>
-		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</body>
 </html>
